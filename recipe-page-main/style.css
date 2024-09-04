@@ -171,6 +171,8 @@ ul li::before {
         max-width: 44rem;
         padding: 2rem;
         border-radius: 2rem;
+        margin-top: 10rem;
+        margin-bottom: 10rem;
     }
 
     .main > img {
