@@ -1,0 +1,183 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+}
+html, * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: var(--stone-900);
+    font-size: 16px;
+}
+
+hr {
+    width: 100%;
+    height: 0.1rem;
+    background: var(--stone-150);
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li::before {
+    content: '•';
+    padding-right: 1.5rem;
+}
+
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-family: 'Outfit', sans-serif;
+    background: var(--white);
+}
+
+.main > img {
+    width: 100%;
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+}
+
+.content h1, h2 {
+    font-family: 'Young Serif', serif;
+    font-weight: 400;
+}
+
+.content h2 {
+    color: var(--brown-800);
+    padding-bottom: 1rem;
+}
+
+.content p {
+    font-weight: 400;
+}
+
+
+.highlighted-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    background: var(--rose-50);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.highlighted-box h4 {
+    color: var(--rose-800);
+}
+
+.highlighted-box li::before {
+    color: var(--rose-800);
+}
+
+.highlighted-box ul li:nth-child(2) {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.highlighted-box ul li span {
+    font-weight: 800;
+}
+
+
+.content-section ul li::marker {
+    color: var(--brown-800);
+}
+
+.content-section ul li:not(:first-child) {
+    padding-top: 0.5rem;
+}
+
+.content-section ol {
+    margin-left: 1rem;
+}
+
+.content-section ol li {
+    padding-left: 1rem;
+}
+
+.content-section ol li:not(:first-child) {
+    padding-top: 1rem;
+}
+
+.content-section ol li::marker {
+    margin-left: 1rem;
+    color: var(--brown-800);
+    font-weight: 600;
+}
+
+.content-section ol li span {
+    font-weight: 700;
+}
+
+
+.overview-table {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.overview-table tr td:first-child {
+    padding-left: 1rem;
+    color: var(--stone-600)
+}
+
+.overview-table tr td:last-child {
+    font-weight: 600;
+    color: var(--brown-800);
+}
+
+.overview-table tr:not(:last-child) td {
+    padding-bottom: 0.75rem;
+}
+
+.overview-table tr:not(:first-child) td {
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--stone-150);
+}
+
+
+@media (min-width: 768px) {
+    body {
+        min-height: 100vh;
+        background-color: var(--stone-100);
+    }
+
+    .main {
+        max-width: 44rem;
+        padding: 2rem;
+        border-radius: 2rem;
+    }
+
+    .main > img {
+        border-radius: 0.75rem;
+    }
+
+    .content {
+        padding: 0;
+    }
+}
