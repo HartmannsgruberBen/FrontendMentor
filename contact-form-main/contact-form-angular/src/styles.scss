@@ -1,0 +1,50 @@
+:root {
+  --green-200: hsl(148, 38%, 91%);
+  --green-600: hsl(169, 82%, 27%);
+  --red: hsl(0, 66%, 54%);
+
+  --white: hsl(0, 0%, 100%);
+  --grey-500: hsl(186, 15%, 59%);
+  --grey-900: hsl(187, 24%, 22%);
+
+  --rounded-small: 0.5rem;
+  --rounded-big: 1rem;
+
+  --spacing-mini: 0.25rem;
+  --spacing-very-small: 0.5rem;
+  --spacing-small: 0.75rem;
+  --spacing: 1rem;
+  --spacing-big: 1.5rem;
+  --spacing-huge: 2.5rem;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("/assets/fonts/static/Karla-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("/assets/fonts/static/Karla-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  background-color: var(--green-200);
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-family: "Karla";
+  font-weight: 400;
+  font-style: normal;
+  width: 100%;
+  height: 100vh;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}

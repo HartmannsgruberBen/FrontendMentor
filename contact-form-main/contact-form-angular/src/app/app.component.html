@@ -1,0 +1,187 @@
+<main>
+  @if(showSuccessMessage) {
+  <app-my-message-dialog
+    [icon]="{
+      path: '../assets/images/icon-success-check.svg',
+      description: 'succes icon'
+    }"
+    [messageDescription]="
+      'Thanks for completing the form. We\'ll be in touch soon!'
+    "
+    [messageHeadline]="'Message Sent!'"
+  ></app-my-message-dialog>
+  }
+  <section>
+    <h1>Contact Us</h1>
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <div class="controlContainer colContainer containerSpacing pointer">
+        <label for="firstName" class="pointer"
+          >First Name <span class="colorGreen">*</span></label
+        >
+        <input
+          id="firstName"
+          formControlName="firstName"
+          class="rounded inputSpacing pointer focusBorder hover"
+          [ngClass]="{
+            errorBorder: validatingFields && fieldShowsError('firstName')
+          }"
+        />
+        <span
+          class="errorText"
+          [ngStyle]="{
+            display:
+              validatingFields && fieldShowsError('firstName')
+                ? 'block'
+                : 'none'
+          }"
+          >This field is required</span
+        >
+      </div>
+
+      <div class="controlContainer colContainer containerSpacing pointer">
+        <label for="lastName" class="pointer"
+          >Last Name <span class="colorGreen">*</span></label
+        >
+        <input
+          id="lastName"
+          formControlName="lastName"
+          class="rounded inputSpacing pointer focusBorder hover"
+          [ngClass]="{
+            errorBorder: validatingFields && fieldShowsError('lastName')
+          }"
+        />
+        <span
+          class="errorText"
+          [ngStyle]="{
+            display:
+              validatingFields && fieldShowsError('lastName') ? 'block' : 'none'
+          }"
+          >This field is required</span
+        >
+      </div>
+
+      <div class="controlContainer colContainer containerSpacing span2">
+        <label for="email" class="pointer"
+          >Email Address <span class="colorGreen">*</span></label
+        >
+        <input
+          id="email"
+          formControlName="email"
+          class="rounded inputSpacing pointer focusBorder hover"
+          [ngClass]="{
+            errorBorder: validatingFields && fieldShowsError('email')
+          }"
+        />
+        <span
+          class="errorText"
+          [ngStyle]="{
+            display:
+              validatingFields && fieldShowsError('email') ? 'block' : 'none'
+          }"
+          >Please enter a valid email address</span
+        >
+      </div>
+
+      <fieldset class="controlContainer containerSpacing span2">
+        <legend>Query Type <span class="colorGreen">*</span></legend>
+
+        <div
+          class="controlContainer rowContainer inputSpacing containerSpacing rounded hover focusBackgroundColor"
+        >
+          <input
+            id="generalEnquiry"
+            type="radio"
+            name="queryType"
+            formControlName="queryType"
+            value="generalEnquiry"
+            class="pointer focusBackgroundColor"
+          />
+          <label for="generalEnquiry" class="pointer">General Enquiry</label>
+        </div>
+
+        <div
+          class="controlContainer rowContainer inputSpacing containerSpacing rounded hover focusBackgroundColor"
+        >
+          <input
+            id="supportRequest"
+            type="radio"
+            name="queryType"
+            formControlName="queryType"
+            value="supportRequest"
+            class="pointer focusBackgroundColor"
+          />
+          <label for="supportRequest" class="pointer">Support Request</label>
+        </div>
+        <span
+          class="errorText"
+          [ngStyle]="{
+            display:
+              validatingFields && fieldShowsError('queryType')
+                ? 'block'
+                : 'none'
+          }"
+          >Please select a query type</span
+        >
+      </fieldset>
+
+      <div class="controlContainer colContainer containerSpacing span2">
+        <label>Message <span class="colorGreen">*</span></label>
+        <textarea
+          id="message"
+          formControlName="message"
+          rows="3"
+          class="rounded inputSpacing focusBorder hover"
+          [ngClass]="{
+            errorBorder: validatingFields && fieldShowsError('message')
+          }"
+        ></textarea>
+        <span
+          class="errorText"
+          [ngStyle]="{
+            display:
+              validatingFields && fieldShowsError('message') ? 'block' : 'none'
+          }"
+          >This field is required</span
+        >
+      </div>
+
+      <div class="controlContainer containerSpacing span2">
+        <div class="controlContainer rowContainer containerSpacing pointer">
+          <input
+            id="contacting"
+            formControlName="contacting"
+            type="checkbox"
+            class="pointer"
+          />
+          <label for="contacting" class="pointer"
+            >I consent to being contacted by the team
+            <span class="colorGreen">*</span></label
+          >
+        </div>
+        <span
+          class="errorText"
+          [ngStyle]="{
+            display:
+              validatingFields && fieldShowsError('contacting')
+                ? 'block'
+                : 'none'
+          }"
+          >To submit this form, please consent to being contacted
+        </span>
+      </div>
+
+      <button type="submit" class="rounded inputSpacing pointer span2">
+        Submit
+      </button>
+    </form>
+  </section>
+
+  <div class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by
+    <a href="https://www.frontendmentor.io/profile/HartmannsgruberBen"
+      >HartmannsgruberBen</a
+    >.
+  </div>
+</main>
