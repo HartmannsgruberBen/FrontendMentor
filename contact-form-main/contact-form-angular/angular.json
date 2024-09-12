@@ -139,6 +139,9 @@
               "devServerTarget": "contact-form-angular:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
