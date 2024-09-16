@@ -1,0 +1,82 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-big);
+}
+
+header {
+  width: 100%;
+}
+
+header > picture > img {
+  width: 100%;
+}
+
+section {
+  padding: var(--spacing-big);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-big);
+}
+
+.item-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+}
+
+.myForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+.input-section > input {
+  padding: var(--padding);
+  border: 1px solid var(--grey);
+  border-radius: var(--rounded);
+}
+
+.input-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+}
+
+.input-header > label {
+  font-weight: var(--weight-thik);
+}
+
+.input-header > span {
+  background-color: inherit;
+}
+
+.error {
+  color: var(--tomato);
+  background-color: mistyrose;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+
+@media (min-width:768px) {
+  :host {
+    flex-direction: row-reverse;
+    gap: 0;
+  }
+
+  header {
+    width: 50%;
+  }
+}

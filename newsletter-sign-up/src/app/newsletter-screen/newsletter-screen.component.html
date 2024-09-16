@@ -1,0 +1,55 @@
+  <header>
+    <picture>
+      <source media="(min-width: 768px)" srcset="../assets/images/illustration-sign-up-desktop.svg">
+      <img src="../assets/images/illustration-sign-up-mobile.svg" alt="mobile head image">
+    </picture>
+  </header>
+
+  <section>
+    <h1>Stay updated!</h1>
+
+    <p>Join 60,000+ product managers receiving monthly updates on:</p>
+    <div class="item-list">
+      <app-my-list-item>
+        <img src="../assets/images/icon-list.svg" alt="list icon">
+        <p>Product discovery and building what matters</p>
+      </app-my-list-item>
+      <app-my-list-item>
+        <img src="../assets/images/icon-list.svg" alt="list icon">
+        <p>Measuring to ensure updates are a success</p>
+      </app-my-list-item>
+      <app-my-list-item>
+        <img src="../assets/images/icon-list.svg" alt="list icon">
+        <p>And much more!</p>
+      </app-my-list-item>
+    </div>
+
+    <form class="myForm" [formGroup]="newsletterFormGroup" (ngSubmit)="onSubmit()">
+      <div class="input-section">
+        <div class="input-header">
+          <label for="email" class="pointer">Email address</label>
+          @if (showError) {
+            <span
+              class="error"
+            >
+              Valid email required
+            </span>
+          }
+        </div>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="email@company.com"
+          class="pointer"
+          formControlName="emailControl"
+          [ngClass]="{'error': showError}"
+        >
+      </div>
+
+      <button
+        type="submit"
+        class="btn btn-hover"
+      >Subscribe to monthly newsletter</button>
+    </form>
+  </section>

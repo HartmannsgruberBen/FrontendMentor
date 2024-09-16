@@ -1,1 +1,74 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --tomato: hsl(4, 100%, 67%);
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+
+  --font-size: 16px;
+
+  --spacing-small: 0.5rem;
+  --spacing: 1rem;
+  --spacing-big: 2rem;
+
+  --padding: 1rem;
+  --padding-big: 2rem;
+
+  --rounded: 0.5rem;
+  --rounded-big: 1rem;
+
+  --weight-thin: 400;
+  --weight-thik: 700;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../src/assets/fonts/Roboto-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../src/assets/fonts/Roboto-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+*, html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--font-size);
+  background-color: var(--dark-slate-grey);
+}
+
+h1 {
+  font-size: 42px;
+}
+
+.btn {
+  padding: var(--padding);
+  border-radius: var(--rounded);
+  font-weight: var(--weight-thik);
+  background-color: var(--dark-slate-grey);
+  color: var(--white);
+  width: 100%;
+}
+
+.btn-hover:hover {
+  background: rgb(255,98,87);
+  background: linear-gradient(135deg, rgba(255,98,87,1) 15%, rgba(254,142,67,1) 100%);
+  box-shadow: 0 10px 20px 5px var(--tomato);
+}

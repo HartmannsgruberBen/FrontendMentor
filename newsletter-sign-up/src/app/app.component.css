@@ -1,0 +1,27 @@
+:host {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  background-color: var(--white);
+  width: 800px;
+}
+
+footer {
+  background-color: yellow;
+  width: fit-content;
+}
+
+@media (min-width: 768px) {
+  :host {
+    align-items: center;
+  }
+
+  main {
+    border-radius: var(--rounded-big);
+    padding: var(--spacing-big);
+  }
+}

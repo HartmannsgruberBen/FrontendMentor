@@ -1,0 +1,36 @@
+:host  {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  padding: var(--spacing-big);
+}
+
+.thanks-area {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-big);
+  flex-grow: 1;
+}
+
+.thanks-area > h1 {
+  font-weight: 700;
+}
+
+.thanks-area > p > span {
+  font-weight: bold;
+}
+
+div {
+  display: flex;
+}
+
+.bottom {
+  align-self: end;
+  justify-self: end;
+}
+
+@media (min-width: 768px) {
+  main {
+    border-radius: var(--rounded-big);
+    gap: var(--spacing-big);
+  }
+}
