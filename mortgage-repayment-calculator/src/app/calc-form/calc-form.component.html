@@ -1,0 +1,28 @@
+<form class="flex, flex-col">
+    <div>
+        <label for="amount">Mortgage Amount</label>
+        <input id="amount" name="amount" type="number">
+    </div>
+    <div>
+        <label for="term">Mortgage Term</label>
+        <input id="term" name="term" type="number">
+    </div>
+    <div>
+        <label for="rate">Interest Rate</label>
+        <input id="rate" name="rate" type="number">
+    </div>
+
+    <fieldset name="type">
+        <legend>Mortgage Type</legend>
+        <div class="flex gap-2">
+            <input type="radio" name="type" id="repayment">
+            <label>Repayment</label>
+        </div>
+        <div class="flex gap-2">
+            <input type="radio" name="type" id="interestOnly">
+            <label>Interest Only</label>
+        </div>
+    </fieldset>
+
+    <button type="submit">Calculate Repayments</button>
+</form>
